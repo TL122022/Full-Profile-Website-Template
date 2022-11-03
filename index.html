@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+        <title>Bryan's Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.4/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.4/swiper-bundle.min.css">
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <div class="mainHeader">
+            <nav>
+                <ul data-inViewport="slideLeft">
+                    <li><h2>Bryan</h2></li>
+                    <li onclick="scrollToAutobiography()">Autobiography</li>
+                    <li onclick="scrollToExpertise()">Expertise</li>
+                    <li onclick="scrollToWorksInProgress()">Works In Progress</li>
+                    <li onclick="scrollToHireMe()">Hire Me</li>
+                </ul>   
+            </nav>
+            
+            <div class="header" data-inViewport="slideLeft">
+                <div class="content">
+                    <h2>Hi, I'm <span>Bryan</span> From Asia</h2>
+                    <p>I am an entrepreneur in coding and programming many things. Learn more below!</p>
+                </div>
+                <img src="profile.jpg">
+            </div>
+        </div>
+        <!-- Header Done! -->
+        <hr>
+        <!-- Autobiography -->
+        <div class="textSection" id="autobiography">
+            <h2 data-inViewport="slideLeft">Autobiography</h2>
+            <div class="content">
+                <p data-inViewport="slideLeft">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tristique lacus, ut semper ipsum. Phasellus magna libero, bibendum varius diam rutrum, mattis ornare leo. Phasellus magna libero, bibendum varius diam rutrum, mattis ornare leo. 
+                </p>
+                <img src="coding.jpg" data-inViewport="slideTop">
+            </div>
+        </div>
+        <!-- Autobiography Done! -->
+        <hr>
+        <!-- Expertise -->
+        <div class="textSection" id="expertise">
+            <h2 data-inViewport="slideLeft">Expertise</h2>
+            <h3 data-inViewport="slideLeft">Coding Skills</h3>
+            <div class="skills">
+                <div class="progress" data-inViewport="slideLeft">
+                    <span>Javascript</span>
+                    <div class="javascript"></div>
+                </div>
+                <div class="progress" data-inViewport="slideLeft">
+                    <span>Python</span>
+                    <div class="python"></div>
+                </div>
+                <div class="progress" data-inViewport="slideLeft">
+                    <span>CSS</span>
+                    <div class="css"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Expertise Done!-->
+        <hr>
+        <!-- Works In Progress -->
+        <div class="textSection" id="worksInProgress">
+            <h2 data-inViewport="slideLeft">Works In Progress</h2>
+            <!-- Slider main container -->
+            <div class="swiper" data-inViewport="slideLeft">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <h2>Python Grinder</h2>
+                    <img src="Python_logo_01.svg">
+                </div>
+                <div class="swiper-slide">
+                    <h2>Website Making</h2>
+                    <img src="website.png">
+                </div>
+                <div class="swiper-slide">
+                    <h2>Personal Profiles</h2>
+                    <img src="profile-pictures.jpg">
+                </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <!-- Works In Progress Done!-->
+        <hr>
+        <!-- Hire Me -->
+        <div class="textSection" id="hireMe">
+            <h2 data-inViewport="slideLeft">Hire Me</h2>
+            <p data-inViewport="slideLeft">Hire me by sending an email to example@example.com.</p>
+            <br>
+            <ion-icon name="chevron-up-outline" id="scrollTop" onclick="scrollToTop()" data-inViewport="slideTop"></ion-icon>
+        </div>
+        <!-- Hire Me Done! -->
+        <hr>
+        <!-- Footer Last Section!!! -->
+        <div class="textSection footer">
+            <p data-inViewport="slideLeft"><a href="https://www.freepik.com/free-photo/profile-portrait-young-asian-businessman_993682.htm#query=person%20profile&position=18&from_view=search&track=sph">Image by katemangostar</a> on Freepik
+                By <a href="https://www.freepik.com/free-vector/flat-design-illustrated-cms-concept_11754584.htm#query=programming%20design&position=28&from_view=search&track=sph">Freepik</a> <br>
+                <a href="https://www.freepik.com/free-vector/single-page-application-abstract-concept-illustration-spa-web-page-web-development-trend-app-inside-browser-dynamically-rewriting-page-responsive-website-creation_10782838.htm#query=html&position=15&from_view=search&track=sph">Image by vectorjuice</a> 
+                <br> Image by <a href="https://www.freepik.com/free-vector/hand-drawn-flat-profile-icon_17539361.htm#query=profile&position=7&from_view=search&track=sph">Freepik</a>
+            </p>
+        </div>
+        <!-- Footer Done!!! Now Animations -->
+        <!-- Now For Dark Light toggle -->
+
+        <script>
+            //Swiper
+            const swiper = new Swiper('.swiper', {
+            loop: true,
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            });
+
+            //SCROLL 
+            function scrollToTop() {
+                window.scrollTo(0, 0);
+            }
+
+            function scrollToAutobiography() {
+                let autobiography = document.getElementById('autobiography');
+                autobiography.scrollIntoView();
+            }
+            function scrollToExpertise() {
+                let expertise= document.getElementById('expertise');
+                expertise.scrollIntoView();
+            }
+
+            function scrollToWorksInProgress() {
+                let worksInProgress= document.getElementById('worksInProgress');
+                worksInProgress.scrollIntoView();
+            }
+
+            function scrollToHireMe() {
+                let hireMe= document.getElementById('hireMe');
+                hireMe.scrollIntoView();
+            }
+
+            // ADD SLIDE IN EFFECT
+            const inViewport = (entries, observer) => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle('is-inViewport', entry.isIntersecting);
+                });
+            }
+
+            const Obs = new IntersectionObserver(inViewport);
+            const obsOptions = {};
+
+            const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+            ELs_inViewport.forEach(EL => {
+                Obs.observe(EL, obsOptions);
+            });
+
+
+        </script>
+        
+    </body>
+</html>
