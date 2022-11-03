@@ -2,14 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     --swiper-theme-color: #42008e;
-}
-:root {
-    --light-color: #fff;
-    --dark-color: #000;
-    --bgcolor: #8bbbdd;
-    --special: #42008e;
+    /* Note: The above variable is a set one in the code */
+    scroll-behavior: smooth;
 }
 .mainHeader {
     width: 100%;
@@ -17,13 +12,13 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background: var(--bgcolor);
+    background: #8bbbdd;
 }
 nav {
     display: flex;
     position: relative;
     padding: 4% 6%;
-    color: var(--dark-color);
+    color: #000;
 }
 nav ul li {
     list-style: none;
@@ -38,67 +33,13 @@ nav ul li {
 nav ul li h2 {
     font-size: 1.4em;
     font-weight: 400;
-    padding-bottom: 1em;
     transition: all 0.5s;
 }
 nav ul li h2:hover {
-    color: var(--special);
-}
-/* @font-face {
-    font-family: 'TECHFont';
-    src: url('custom-font.woff') format('woff'),
-    url('customr-font.woff2') format('woff2');
-} */
-.pages {
-    transition: all 0.5s;
-}
-.pages::after {
-    content: '';
-    position: absolute;
-    transform: translate(-90%, 100%);
-    z-index: -1;
-    width: 100%;
-    height: 1.2em;
-    border-radius: 15px;
-    background: #2cab65;
-    margin: auto;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-}
-.pages:hover::after {
-    transform: translate(-90%, 10%) rotate(180deg);
-    opacity: 1;
-    animation: hueChange 4s linear infinite;
-}
-@keyframes hueChange {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-    100% {
-        filter: hue-rotate(360deg);
-    }
-}
-ion-icon[name="moon-outline"] {
-    margin-left: 1.8em;
-    margin-top: 0.8em;
-    border: none;
-    color: #000;
-    opacity: 1;
-}
-ion-icon[name="moon-outline"]:hover {
-    background: transparent;
-    color: #000;
-}
-ion-icon[name="sunny-outline"], ion-icon[name="sunny-outline"]:hover {
-    margin-top: 0.8em;
-    border: none;
-    background: transparent;
-    color: #fff;
-    opacity: 0;
-    visibility: hidden;
+    color: #42008e;
 }
 .header {
-    color: var(--dark-color);
+    color: #000;
     justify-content: left;
     display: flex;
     align-items: left;
@@ -107,9 +48,8 @@ ion-icon[name="sunny-outline"], ion-icon[name="sunny-outline"]:hover {
     display: inline-block;
     transform: translate(4em, 0);
 }
-.header h2 {
+.header .content h2 {
     padding: 0.4em 1em;
-    /* left: 4em; */
     top: 0;
     text-align: left;
     font-size: 2.5em;
@@ -117,56 +57,32 @@ ion-icon[name="sunny-outline"], ion-icon[name="sunny-outline"]:hover {
     font-weight: 400;
     position: relative;
 }
-.header h2 span {
-    color: var(--special);
-    transition: all 2s;
+.header .content h2 span {
+    color: #42008e;
 }
 .header p {
     padding: 0.4em 1em;
+    top: 0;
+    text-align: left;
+    font-size: 1.2em;
+    width: 18em;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    width: 18em;
-    /* left: 8.2em; */
-    text-align: left;
     position: relative;
     margin: 1em;
-    font-size: 1.2em;
 }
 .header img {
     display: block;
-    /* left: 4em; */
     position: relative;
-    right: 0;
     width: 60em;
+    right: 0;
 }
-/* button {
-    padding: 0.8em 1.2em;
-    cursor: pointer;
-    text-align: center;
-    margin: 1em;
-    position: relative;
-    outline: none;
-    border: none;
-    background: #00cc00;
-    border-radius: 4em;
-    font-family: 'Poppins';
-    text-transform: uppercase;
-    top: 50%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    font-weight: 400;
-    transition: all 0.5s;
-}
-button:hover {
-    background: var(--dark-color);
-    color: var(--dark-color);
-} */
 hr {
     border: 1px solid #fff;
 }
 .textSection {
-    background: var(--bgcolor);
-    color: var(--dark-color);
+    background: #8bbbdd;
+    color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,9 +90,9 @@ hr {
     width: 100%;
 }
 .textSection h2 {
-    color: var(--dark-color);
+    color: #000;
     text-align: center;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     padding: 0.5em;
     text-transform: uppercase;
@@ -185,11 +101,11 @@ hr {
     position: relative;
 }
 .textSection p {
-    color: var(--dark-color);
+    color: #000;
     text-align: center;
+    position: relative;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
-    position: relative;
     padding: 0.3em;
 }
 #autobiography {
@@ -231,77 +147,43 @@ hr {
 .skills .progress {
     width: 35em;
     height: 1em;
-    border-radius: 0.5em;
-    margin: 1.8em;
     background: #70a5ca;
+    margin: 1.8em;
+    border-radius: 0.5em;
 }
 .skills .progress span {
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
     margin: 0.4em;
-    position: relative;
     display: flex;
     transform: translateY(-2em);
 }
 .skills .progress div {
-    /* width: 70%; */
     height: 100%;
     border-radius: 0.5em;
     position: relative;
     transform: translateY(-2.4em);
     z-index: 1;
+    animation: enter 1s linear forwards;
 }
 .javascript {
     width: 82%;
     background: #00cc00;
-    transition-delay: 0.5s;
 }
 .python {
     width: 60%;
     background: #c421a3;
-    transition-delay: 1s;
 }
 .css {
-    width: 90%;
+    width: 80%;
     background: #3759ca;
-    transition-delay: 1.5s;
-}
-[data-inViewport="increase"] {
-    transition: 1.5s;
-    opacity: 1;
-}
-[data-inViewport="increase"].is-inViewport {
-    opacity: 1;
-    animation: enter 1s ease-in-out forwards;
 }
 @keyframes enter {
-    0% {
-        width: 0;
+    from {
+        width: 0%;
     }
 }
-ion-icon {
-    font-size: 1.5em;
-    color: var(--dark-color);
-    border-radius: 50%;
-    padding: 0.3em;
-    border: 0.085em solid var(--dark-color);
-    cursor: pointer;
-    transition: all 0.5s;
-}
-ion-icon:hover {
-    color: var(--light-color);
-    background: var(--special);
-}
-/* #worksInProgress img {
-    width: 20em;
-    border-radius: 2em;
-    position: relative;
-    margin: 1em;
-} */
-#worksInProgress p {
-    font-family: 'Poppins';
-    text-transform: uppercase;
-}
+/* Swiper */
 .swiper {
     width: 18em;
     height: 23em;
@@ -318,12 +200,12 @@ ion-icon:hover {
 .swiper-slide h2 {
     position: relative;
     top: -1em;
-    margin: 0.2em 1em;
     font-size: 1.5em;
+    margin: 0.2em 1em;
 }
 .swiper-slide img {
-    position: relative;
     width: 10em;
+    position: relative;
     margin: 0.2em;
 }
 #hireMe p {
@@ -336,70 +218,37 @@ ion-icon:hover {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 1px solid var(--special);
+    border: 1px solid #42008e;
     cursor: pointer;
+    padding: 0.3em;
     transition: all 0.5s;
 }
 #scrollTop:hover {
-    color: var(--bgcolor);
-    background: var(--special);
+    color: #8bbbdd;
+    background: #42008e;
 }
 .footer {
-    background: var(--bgcolor);
+    background: #8bbbdd;
     width: 100%;
-    height: relative;
+    position: relative;
     min-height: 20vh;
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     column-gap: 2em;
 }
 .footer p {
     padding: 0.5em;
-    line-height: 1.5em;
-    text-align: center;
     font-size: 0.8em;
-    position: absolute;
+    text-align: center;
     display: block;
+    position: absolute;
     margin: 2em;
 }
-.footer a {
-    color: var(--special);
-}
-/* Top */
-[data-inViewport="slideTop"] {
-    transition: 1.5s;
-    opacity: 0;
-    transform: translateY(-6em);
-}
-[data-inViewport="slideTop"].is-inViewport {
-    opacity: 1;
-    transform: translateY(0em);
-}
-/* Right */
-[data-inViewport="slideRight"] {
-    transition: 1s;
-    opacity: 0;
-    transform: translateX(4em);
-}
-[data-inViewport="slideRight"].is-inViewport {
-    opacity: 1;
-    transform: translateY(0em);
-}
-/* Bottom */
-[data-inViewport="slideBottom"] {
-    transition: 1.5s;
-    opacity: 0;
-    transform: translateY(4em);
-}
-[data-inViewport="slideBottom"].is-inViewport {
-    opacity: 1;
-    transform: translateY(0em);
-}
-/* Left */
+/* For slide in from left */
 [data-inViewport="slideLeft"] {
-    transition: 2s;
+    transition: 1.5s;
     opacity: 0;
     transform: translateX(-4em);
 }
@@ -407,43 +256,28 @@ ion-icon:hover {
     opacity: 1;
     transform: translateX(0em);
 }
+/* For Slide In from top */
+[data-inViewport="slideTop"] {
+    transition: 1.5s;
+    opacity: 0;
+    transform: translateY(-4em);
+}
+[data-inViewport="slideTop"].is-inViewport {
+    opacity: 1;
+    transform: translateY(0em);
+}
 
-/* Breakpoints */
-/* @media screen and (max-width: 1080px) {
-    .boxes {
-        flex-direction: column;
-    }
-} */
-/* @media screen and (max-width: 375px) {
-    .mainHeader {
-        min-height: 50vh;
-    }
-    .header .content {
-        transform: translate(0, 0);
-    }
-    ion-icon {
-        font-size: 3em;
-        width: 3em;
-        height: 3em;
-    }
-    .icon-inner svg {
-        width: 3em;
-    }
-    nav {
-        display: flex;
-        flex-direction: row;
-        max-height: 30vh;
-    }
-    nav ion-icon {
-        visibility: visible;
-    }
-    nav ul li  {
-        visibility: hidden;
-    }
-    nav ul li h2 {
-        visibility: visible;
-    }
-    #autobiography .content{
-        flex-direction: column;
-    }
-} */
+ion-icon[name="moon-outline"] {
+    margin-left: 1.8em;
+    margin-top: 0.8em;
+    border: none;
+    color: #000;
+    opacity: 1;
+}
+ion-icon[name="sunny-outline"] {
+    margin-left: 1.8em;
+    margin-top: 0.8em;
+    border: none;
+    color: #000;
+    opacity: 1;
+}
